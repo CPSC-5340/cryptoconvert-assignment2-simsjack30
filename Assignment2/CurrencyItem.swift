@@ -5,6 +5,7 @@
 //  Created by John Sims on 3/23/24.
 //
 
+//CurrencyItem
 import SwiftUI
 
 struct CurrencyItem: View {
@@ -34,16 +35,20 @@ struct FrontCurrencyItem: View {
         VStack {
             HStack {
                 Text(card.countryFlag)
+                    .font(.system(size: 64))
                 Spacer()
             }
             HStack {
                 Spacer()
                 Text(card.currentyCode)
+                    .foregroundColor(.white)
+                    .font(.system(size: 32))
+
             }
         }
         .frame(width: 130, height: 130)
         .padding()
-        .background(.blue)
+        .background(.black)
     }
 }
 
@@ -55,15 +60,19 @@ struct BackCurrencyItem: View {
         VStack {
             HStack {
                 Text(card.currencyName)
+                    .foregroundColor(.white)
+                    .font(.system(size: 24))
                 Spacer()
             }
             HStack {
                 Spacer()
                 Text(String(card.multiplier))
+                    .foregroundColor(.white)
+                    .font(.system(size: 24))
             }
         }
         .frame(width: 130, height: 130)
         .padding()
-        .background(.blue)
+        .background(.black)
     }
 }

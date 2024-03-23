@@ -4,7 +4,7 @@
 // Copyright © 2023 Auburn University.
 // All Rights Reserved.
 
-
+//Converter
 import SwiftUI
 
 struct Converter: View {
@@ -13,6 +13,9 @@ struct Converter: View {
     
     var body: some View {
         ScrollView {
+            Text("1 USD Exchange Rate")
+                .bold()
+                .font(.system(size: 24))
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))]) {
                 ForEach(viewModel.listOfCards) { card in
                     CurrencyItem(card: card)
